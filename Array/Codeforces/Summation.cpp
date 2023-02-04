@@ -2,18 +2,46 @@
 #include<cmath>
 #include<algorithm>
 using namespace std;
-int main()
+
+void search_for(int arr[], int item,int size)
 {
-	int n,val;
-	cin >> n;
-	long long summation = 0;
-	for (int i = 0; i < n; i++)
+	int low = 0,  mid;
+	mid = ((low + size)+1) / 2;
+
+	bool flag = false;
+
+	while (low < size)
 	{
-		cin >> val;
-		summation += val;
+		if (item == arr[mid])
+		{
+			cout << mid;
+			return;
+		}
+		else if (item < arr[mid])
+			size = mid;
+		else
+			low = mid + 1;
 	}
 
-	cout << abs(summation);
+	if (!flag)
+		cout << -1;
+}
+int main()
+{
+	
+	int size;
+	cin >> size;
+
+	int* arr = new int[size];
+
+	for (int i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+
+	int item;
+	cin >> item;
+	search_for(arr, item, size);
 
 	return 0;
 }
