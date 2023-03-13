@@ -11,3 +11,9 @@
 - isEmpty => check if the stack has no items || the length of the stack equals to 0
 - isFull => check if there is no extra space in the stack to add new items || the length of the stack equals the predetermined size
 - display => It prints all the elements available in the stack.
+
+# Stack Resources
+
+- [Stack Data Structure | Illustrated Data Structures](https://www.youtube.com/watch?v=I5lq6sCuABE)
+- [JavaPoint Stack explainenation](https://www.javatpoint.com/data-structure-stack)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/stack-data-structure/)
